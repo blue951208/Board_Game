@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>부르마블</title>
+<!-- 부트스트랩 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+<style>
+ td{
+      font-size:9px;
+      width: 150px;
+       height:150px;
+       text-align:center;
+   }
+   #pl {
+   		width:50px;
+   		height:50px;
+   }
+  
+ </style>
+ 	
+ 	<script src="/board_Game/scripts/jquery-3.4.1.min.js"></script>
+ 	<script src="/board_Game/scripts/x.js"></script>
+ 	<script src="/board_Game/scripts/game.js"></script>
+ 	<script src="/board_Game/scripts/city.js"></script>
+ 	<script src="/board_Game/scripts/land.js"></script>
+ 	<script src="/board_Game/scripts/goldenkey.js"></script>
+ 	<script src="/board_Game/scripts/goldKey.js"></script>
+	<script src="/board_Game/scripts/space.js"></script>
+	
+</head>
+<body>
+	<h1>부르마블</h1>
+	<ul id="choose">
+		<li>2인 플레이<input type="radio" name="number" class="p" value="2"></li>
+		<li>3인 플레이<input type="radio" name="number" class="p" value="3"></li>
+		<li>4인 플레이<input type="radio" name="number" class="p" value="4"></li>
+	</ul>	
+		<button id="playerNumber">확인</button>
+	
+	<button id="move">Go</button>
+		<div class="row">
+			<div class="col-sm-8">
+				<table class ="board" border="1">
+					<tr><!--  위에 줄 -->
+						<td id="pic1">Start <div class="gold">1</div></td>
+						<td id="pic2"><div class="city">타이페이</div><div class="gold">50000</div></td>
+			
+						<td id="pic3" class="goldenKey">황금카드<div class="gold">3</div></td>
+						<td id="pic4"><div class="city">베이징</div><div class="gold">80000</div></td>
+						<td id="pic5"><div class="city">마닐라</div><div class="gold">80000</div></td>
+						<td id="pic6"><div class="city">제주도</div><div class="gold">200000</div></td>
+						<td id="pic7"><div class="city">싱가포르</div><div class="gold">100000</div></td>
+						<td id="pic8">황금카드<div class="gold">8</div></td>
+						<td id="pic9"><div class="city">카이로</div><div class="gold">100000</div></td>
+						<td id="pic10"><div class="city">이스탄불</div><div class="gold">120000</div></td>
+						<td id="pic11">무인도<div class="gold">11</div></td>
+					</tr>
+					<tr><!-- 왼쪽 줄 -->
+						<td id="pic40"><div class="city">서울</div><div class="gold">1000000</div></td>
+						<td rowspan="9" colspan="9">
+							<h3 id="donate">기부 금액:</h3>
+						<div class="container">
+							<span id="one"></span>
+							<span id="two"></span>
+						</div>
+						
+							<div id="where">
+								<select id='build'>
+									<option value=1>땅</option>
+									<option value=2>별장</option>
+									<option value=3>빌딩</option>
+									<option value=4>호텔</option>
+								</select>"
+								<button id='buy'>Buy</button>
+							</div>
+							
+							<select id="trip"><!-- 우주여행 칸은 31 -->
+									<option value=1>출발</option>
+									<option value=2>타이베이</option>
+									<option value=3>황금열쇠</option>
+									<option value=4>베이징</option>
+									<option value=5>마닐라</option>
+									<option value=6>제주</option>
+									<option value=7>싱가포르</option>
+									<option value=8>황금열쇠</option>
+									<option value=9>카이로</option>
+									<option value=10>이스탄불</option>
+									<option value=11>무인도</option>
+									<option value=12>아테네</option>
+									<option value=13>황금 열쇠</option>
+									<option value=14>코펜하겐</option>
+									<option value=15>스톡홀름</option>
+									<option value=16>콩코드 여객기</option>
+									<option value=17>베른</option>
+									<option value=18>황금 열쇠</option>
+									<option value=19>베를린</option>
+									<option value=20>오타와</option>
+									<option value=21>사회복지 기금 접수처</option>
+									<option value=22>부에노스아이레스</option>
+									<option value=23>황금열쇠</option>
+									<option value=24>상파울루</option>
+									<option value=25>시드니</option>
+									<option value=26>부산</option>
+									<option value=27>하와이</option>
+									<option value=28>리스본</option>
+									<option value=29>퀸 엘리자베스호</option>
+									<option value=30>마드리드</option>
+									<option value=32>도쿄</option>
+									<option value=33>컬럼비아호</option>
+									<option value=34>파리</option>
+									<option value=35>로마</option>
+									<option value=36>황금 열쇠</option>
+									<option value=37>런던</option>
+									<option value=38>뉴욕</option>
+									<option value=39>사회복지 기금</option>
+									<option value=40>서울</option>
+								</select>
+							<button id="gogo">GoGo</button>
+							<div></div>
+							<button id="goldenBtn">황금 열쇠 </button>
+						</td>
+						<td id="pic12"><div class="city">아테네</div><div class="gold">140000</div></td>
+					</tr>
+					<tr>
+						<td id="pic39" class="donate">사회복지기금<div class="gold">39</div></td>
+			
+						<td id="pic13" class="goldenKey">황금카드<div class="gold">13</div></td>
+					</tr>
+					<tr>
+						<td id="pic38"><div class="city">뉴욕</div><div class="gold">350000</div></td>
+			
+						<td id="pic14"><div class="city">코펜하겐</div><div class="gold">160000</div></td>
+					</tr>
+					<tr>
+						<td id="pic37"><div class="city">런던</div><div class="gold">350000</div></td>
+			
+						<td id="pic15"><div class="city">스톡홀름</div><div class="gold">160000</div></td>
+					</tr>
+					<tr>
+						<td id="pic36" class="goldenKey">황금열쇠<div class="gold">36</div></td>
+			
+						<td id="pic16"><div class="city">콩코드여객기</div><div class="gold">200000</div></td>
+					</tr>
+					<tr>
+						<td id="pic35"><div class="city">로마</div><div class="gold">320000</div></td>
+			
+						<td id="pic17"><div class="city">베른</div><div class="gold">180000</div></td>
+					</tr>
+					<tr>
+						<td id="pic34"><div class="city">파리</div><div class="gold">320000</div></td>
+			
+						<td id="pic18" class="goldenKey">황금카드<div class="gold">18</div></td>
+					</tr>
+					<tr>
+						<td id="pic33"><div class="city">콜럼비아호</div><div class="gold">450000</div></td>
+			
+						<td id="pic19"><div class="city">베를린</div><div class="gold">180000</div></td>
+					</tr>
+					<tr>
+						<td id="pic32"><div class="city">도쿄</div><div class="gold">300000</div></td>
+			
+						<td id="pic20"><div class="city">오타와</div><div class="gold">200000</div></td>
+					</tr>
+					<tr><!-- 아래 줄 -->
+						<td id="pic31" class="spaceTravel">
+							우주여행<div class="gold">31</div>
+						</td>
+						<td id="pic30"><div class="city">마드리드</div><div class="gold">280000</div></td>
+						<td id="pic29"><div class="city">퀸엘리자베스호</div><div class="gold">300000</div></td>
+						<td id="pic28"><div class="city">리스본</div><div class="gold">260000</div></td>
+						<td id="pic27"><div class="city">하와이</div><div class="gold">260000</div></td>
+						<td id="pic26"><div class="city">부산</div><div class="gold">500000</div></td>
+						<td id="pic25"><div class="city">시드니</div><div class="gold">240000</div></td>
+						<td id="pic24"><div class="city">쌍파울로</div><div class="gold">240000</div></td>
+						<td id="pic23" class="goldenKey">황금카드<div class="gold">23</div></td>
+						<td id="pic22"><div class="city">부에노스아이레스</div><div class="gold">220000</div></td>
+						<td id="pic21" class="helper">시회복지기금<div class="gold">21</div></td>
+					</tr>
+				</table>	
+				
+			</div>
+			<div class="col-sm-4">
+					<div id="dialogTag">
+					<!--  dialogTag 출력 -->
+					</div>
+				<table border="1">
+					<tr>
+						<td colspan="2"><img src="/board_Game/images/player1.gif">Player1</td>
+					</tr>
+					<tr>
+							<td>플레이어 아이템:</td> <td id="player1Item"></td>
+					</tr>
+					<tr>
+						<td>금액</td><td id="player1_money"></td>
+					</tr>
+				</table>
+				<table border="1">
+					<tr>
+						<td colspan="2"><img src="/board_Game/images/player2.gif">Player2</td> 
+					</tr>
+					<tr>
+							<td>플레이어 아이템:</td> <td id="player2Item"></td>
+					</tr>
+					<tr>
+						<td>금액</td><td id="player2_money"></td>
+					</tr>
+				</table>
+				<table border="1">
+					<tr>
+						<td colspan="2"><img src="/board_Game/images/player3.gif">Player3</td> 
+					</tr>
+					<tr>
+							<td>플레이어 아이템:</td><td id="player3Item"></td>
+					</tr>
+					<tr>
+						<td>금액</td><td id="player3_money"></td>
+					</tr>
+				</table>
+				<table border="1">
+					<tr>
+						<td colspan="2"><img src="/board_Game/images/player4.gif">Player4</td> 
+					</tr>
+					<tr>
+							<td>플레이어 아이템:</td><td id="player4Item"></td>
+					</tr>
+					<tr>
+						<td>금액</td><td id="player4_money"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+</body>
+<script>
+/**
+ * 
+ */
+$(document).ready(function(){
+		$(".board").hide();
+		$("#where").hide();
+		$("#move").hide();
+		$("#trip").hide();
+		$("#gogo").hide();
+		$("#goldenBtn").hide();
+	
+		$("#playerNumber").click(function(){
+			player_number = $('input:radio[name="number"]:checked').val();//radio 버튼 ,몇명이서 플레이 할지 클릭
+			console.log("플레이할 인원 :",player_number);
+			
+				for(let i = 1; i <= player_number; i++){
+					let money="#player"+i+"_money";
+					$(money).text(startMoney);//처음 보유 재산 출력
+					}
+		
+				$(".board").show();
+				$("#move").show();
+				$("#playerNumber").hide();
+				$("#choose").hide();
+				//버튼 클릭시 주사위 나옴 2개
+		
+				console.log("확인버튼 종료");
+		});//-----------------------확인 버튼 클릭
+	//---------------------------------------------------------------------------	
+		$(document).on("click","#move",function(){//주사위 버튼 클릭
+				$("#one").empty();
+				$("#two").empty();
+				dice();		// 각 플레이어가 움직인다
+				$("#move").hide();
+			});
+		$(document).on("click","#gogo",function(){
+			space();
+		});	
+		
+		//--------------------------------황금 카드 버튼 클릭
+		$("#goldenBtn").click(function(){ 
+			goldKey();
+			$("#goldenBtn").hide();
+		});
+		
+		
+		//건물 사기 버튼 클릭시
+		$("#buy").click(function(){
+			ground();
+			console.log("버튼 이벤트",land); //check
+			console.log(gamer);
+			let build=$("#build option:selected").val();//select에서 선택한 option에 값을 변수에 게이머 돈에서 삭감
+			console.log("선택",build);
+			if(build ==1){
+				price = land.landPrice;
+				console.log("값 ckeck:",price);
+				
+				fee = land.landFee;
+				console.log("통행료",fee);
+			}else if(build ==2){
+				price = land.villaPrice;
+				console.log("값 ckeck:",price);
+				
+				fee = land.villaFee;
+				console.log("통행료",fee);
+			}else if(build == 3){
+				price = land.buildingPrice;
+				console.log("값 ckeck:",price);
+				
+				fee = land.buildingFee;
+				console.log("통행료",fee);
+			}else if(build == 4){
+				price = land.hotelPrice;
+				console.log("값 ckeck:",price);
+				
+				fee = land.hotelFee;
+				console.log("통행료",fee);
+			}
+			//전체 통행료
+			totalFee += fee;
+			$(afterId).find(".gold").empty();
+			$(afterId).find(".gold").text(fee);
+			
+			
+			console.log("++--",gamer);
+			gamer.money-= price;
+			//걸린 플레이어에 다음 플레이어에 돈이 줄어든다.
+			person = "#player"+gamer.who+"_money"
+			console.log("++--person 체크",person);
+			$(person).empty();
+			$(person).text(gamer.money);
+			
+			land.state=gamer.who;
+			
+			$("#where").hide();
+			$("#move").show();
+			
+		})
+		
+	});
+	
+</script>
+</html>
