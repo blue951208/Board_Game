@@ -5,36 +5,40 @@
 	
 	let	player1 = {
 			who :1,
-			afterPoint : 1,
-			beforePoint : 1,
+			afterPoint : 0,
+			beforePoint : 0,
 			beforeId : "#pic"+beforePoint,
+			afterId : "#pic" +afterPoint,
 			round : 0,
 			condition : 0,
 			money : 3000000
 		}
 	let	player2 = {
 			who : 2,	
-			afterPoint : 1,
-				beforePoint : 1,
+			afterPoint : 0,
+				beforePoint : 0,
 				beforeId : "#pic"+beforePoint,
+				afterId : "#pic" +afterPoint,
 				round : 0,
 				condition : 0,
 				money : 3000000
 			}
 	let	player3 = {
 			who :3,
-				afterPoint : 1,
-				beforePoint : 1,
+				afterPoint : 0,
+				beforePoint : 0,
 				beforeId : "#pic"+beforePoint,
+				afterId : "#pic" +afterPoint,
 				round : 0,
 				condition : 0,
 				money : 3000000
 			}
 	let	player4 = {
 			who :4,
-				afterPoint : 1,
-				beforePoint : 1,
+				afterPoint : 0,
+				beforePoint : 0,
 				beforeId : "#pic"+beforePoint,
+				afterId : "#pic" +afterPoint,
 				round : 0,
 				condition : 0,
 				money : 3000000

@@ -265,14 +265,16 @@ $(document).ready(function(){
 				console.log("확인버튼 종료");
 		});//-----------------------확인 버튼 클릭
 	//---------------------------------------------------------------------------	
-		$(document).on("click","#move",function(){//주사위 버튼 클릭
+		
+	$(document).on("click","#move",function(){//주사위 버튼 클릭
 				$("#one").empty();
 				$("#two").empty();
 				dice();		// 각 플레이어가 움직인다
 				$("#move").hide();
 			});
+		
 		$(document).on("click","#gogo",function(){
-			space();
+			space(gamer);
 		});	
 		
 		//--------------------------------황금 카드 버튼 클릭

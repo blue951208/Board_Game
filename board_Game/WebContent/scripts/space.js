@@ -4,7 +4,7 @@
 
 
 
-	let space = function(){//--------------------select 클릭
+	let space = function(gamer){//--------------------select 클릭
 		console.log(gamer);
 			//선택한 값을 받아온다
 			gamer.afterPoint = $("#trip option:selected").val();//select에서 선택한 option에 값을 afterPoint에 저장
@@ -19,14 +19,14 @@
 				$(person).text(gamer.money);//---------재산 출력
 			}
 			gamer.beforeId = "#pic31";
-			afterId = "#pic"+gamer.afterPoint;
-			console.log("이동할 위치 태그",afterId,"이동전 위치>:",gamer.beforeId);
+			gamer.afterId = "#pic"+gamer.afterPoint;
+			console.log("이동할 위치 태그",gamer.afterId,"이동전 위치>:",gamer.beforeId);
 		
 			
 			//주사위 돌리기 전 이미지 삭제
 			$(gamer.beforeId).find(".player"+play).remove();
 			//캐릭터 출력
-			$(afterId).append("<input id='pl' class='player"+play+"' type= 'image' src='/board_Game/images/player"+play+".gif'>");
+			$(gamer.afterId).append("<input id='pl' class='player"+play+"' type= 'image' src='/board_Game/images/player"+play+".gif'>");
 			
 			//현재 위치를 주사위 돌리기 전으로 초기화해준다
 			gamer.beforePoint = gamer.afterPoint;

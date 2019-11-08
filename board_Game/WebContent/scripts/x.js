@@ -10,7 +10,7 @@
 	let afterPoint = 1;
 	let beforePoint = 1;
 	let beforeId = "#pic1";
-	let afyerId;
+	let afterId;
 	let round = 0;
 	let play = 1; 
 	let donate = 0;
