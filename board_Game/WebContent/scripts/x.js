@@ -17,7 +17,7 @@
 	let turn = 0;
 	let player_number;
 	let condition;
-	let who;
+
 	let person = "#player"+play+"_money";//플레이어에 재산을 출력할수 있는 태그
 	let playItem ="#player"+play+"Item";
 	

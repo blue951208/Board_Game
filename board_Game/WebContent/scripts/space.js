@@ -42,5 +42,5 @@
 			$("#trip").hide();
 			$("#gogo").hide();
 			$("#move").show();
-			return;
+		
 		};
