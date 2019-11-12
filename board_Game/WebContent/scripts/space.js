@@ -2,8 +2,6 @@
  * 
  */
 
-
-
 	let space = function(gamer){//--------------------select 클릭
 		console.log(gamer);
 			//선택한 값을 받아온다
